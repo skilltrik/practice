@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 task_file = 'tasks.json'
 
@@ -57,7 +58,8 @@ def get_id():
         print('Вы ввели некорректное значение')
 
 def get_tags():
-    tags = input('Введите теги через запятую: ').split(', ')
+    raw = input('Введите теги через запятую: ')
+    tags = re.split(r'\s*,\s*', raw.strip())
     return tags
 
 def get_status(task):
