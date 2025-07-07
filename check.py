@@ -1,5 +1,3 @@
-def add():
-    tags = input('Введите теги через запятую: ').split(', ')
-    print(tags)
-
-add()
+a = [1,2,3,2,3]
+a = set(a)
+print(list(a))

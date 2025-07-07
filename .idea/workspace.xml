@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c111f231-5bfe-46d8-98e4-f747ecc8756f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/1 week.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="c111f231-5bfe-46d8-98e4-f747ecc8756f" name="Changes" comment="Add file">
+      <change afterPath="$PROJECT_DIR$/chat bot/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json task manager/storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json task manager/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json task manager/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/json task manager/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/json task manager/tasks.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,15 +29,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/skilltrik/practice.git",
-    "accountId": "9b38996a-4263-47df-b7d5-1de374a6e588"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;skilltrik&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/skilltrik/practice.git&quot;,
+    &quot;accountId&quot;: &quot;9b38996a-4263-47df-b7d5-1de374a6e588&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2zXbs9fpr2ZSL8xSYXfzvRx22Fq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,11 +54,19 @@
   "keyToString": {
     "Python.check.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.tasks.executor": "Run",
+    "Python.utlls.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/badru/PycharmProjects/1 week"
+    "last_opened_file_path": "C:/Users/badru/PycharmProjects/1 week",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\badru\PycharmProjects\1 week\json task manager" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,6 +83,35 @@
       <option name="presentableId" value="Default" />
       <updated>1751880568568</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1751888773744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751888773744</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1751891184849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751891184849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1751891404497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751891404497</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add file" />
   </component>
 </project>
