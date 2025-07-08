@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c111f231-5bfe-46d8-98e4-f747ecc8756f" name="Changes" comment="Add file">
-      <change afterPath="$PROJECT_DIR$/chat bot/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json task manager/storage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json task manager/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json task manager/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat bot/test_things/1 test - buttons.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat bot/test_things/2 test - bd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat bot/weather_bot/3 test - weather.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat bot/weather_bot/asynctrans.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat bot/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/json task manager/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/json task manager/tasks.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.2 test.executor": "Run",
+    "Python.3 test - weather.executor": "Run",
+    "Python.asynctrans.executor": "Run",
     "Python.check.executor": "Run",
     "Python.main.executor": "Run",
     "Python.tasks.executor": "Run",
@@ -64,6 +66,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\badru\PycharmProjects\1 week\chat bot\test_things" />
+      <recent name="C:\Users\badru\PycharmProjects\1 week\chat bot\weather_bot" />
       <recent name="C:\Users\badru\PycharmProjects\1 week\json task manager" />
     </key>
   </component>
@@ -107,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751891404497</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1751906820227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751906820227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
