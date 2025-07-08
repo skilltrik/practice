@@ -1,9 +1,7 @@
-import asyncio
-from googletrans import Translator
+from datetime import datetime, timezone, timedelta
 
-async def main():
-    translator = Translator()
-    translated = await translator.translate("Makhachkala", dest="en")
-    print("Перевод:", translated.text)
-
-asyncio.run(main())
+timezone_offset = 32400
+custom_timezone = timezone(timedelta(seconds=timezone_offset))
+sunrise_utc = datetime.fromtimestamp(1751916731, tz=timezone.utc)
+sunrise_local = sunrise_utc.astimezone(custom_timezone).strftime("%Y-%m-%d %H:%M:%S")
+print(sunrise_local)

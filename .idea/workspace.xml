@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c111f231-5bfe-46d8-98e4-f747ecc8756f" name="Changes" comment="Add file">
-      <change afterPath="$PROJECT_DIR$/chat bot/weather_bot/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat bot/weather_bot/util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat bot/weather_bot/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat bot/weather_bot/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat bot/weather_bot/sub_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/check.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751983019226</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1751984148533</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751984148533</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">

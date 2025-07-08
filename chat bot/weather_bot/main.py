@@ -1,8 +1,7 @@
 import telebot
 import requests
 import json
-import sub_main
-import time
+import util
 import os
 from dotenv import load_dotenv
 
@@ -20,19 +19,43 @@ def main(message):
 
 @bot.message_handler(content_types=['text'])
 def get_weather(message):
-    start_time = time.time()
-    city = sub_main.run(message.text.strip().lower(), True)
-    res = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API}&units=metric')
-    if res.status_code == 200:
-        data = json.loads(res.text)
-        bot.reply_to(message, f"""
-Погода сейчас:
-Температура - {data['main']['temp']} градусов
-Облачность - {sub_main.run(data['weather'][0]['description'], False)}
-Ветер - {data['wind']['speed']} м/c
-""")
-    else:
-        bot.reply_to(message, 'Неправильный город')
-    start_time = start_time - time.time()
-    print(start_time)
+    city = util.run(message.text.strip().lower(), True)
+
+    try:
+        res = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API}&units=metric')
+
+        if res.status_code == 200:
+            info = util.data_processing(json.loads(res.text))
+            msg = f"""<b>🌤 Погода в городе</b>
+------------------------------------------
+🕒 <b>Время:</b> {info['time']}
+
+🌅 <b>Рассвет:</b> {info['sunrise']}
+
+🌇 <b>Закат:</b> {info['sunset']}
+------------------------------------------
+
+------------------------------------------
+🌡 <b>Температура:</b> {info['temp']}°C
+
+🥶 <b>Ощущается как:</b> {info['temp_feel']}°C
+------------------------------------------
+
+------------------------------------------
+☁️ <b>Облачность:</b> {info['sky']}
+
+💨 <b>Ветер:</b> {info['wind']} м/с
+
+💧 <b>Влажность:</b> {info['humidity']}%
+------------------------------------------
+"""
+            bot.send_message(message.chat.id, msg, parse_mode='html')
+
+        else:
+            bot.reply_to(message, 'Неправильный город')
+
+    except requests.exceptions.RequestException as e:
+        bot.reply_to(message, f"❌ Ошибка подключения")
+        return
+
 bot.polling(none_stop=True)
