@@ -3,9 +3,14 @@ import requests
 import json
 import sub_main
 import time
+import os
+from dotenv import load_dotenv
 
-bot = telebot.TeleBot('8055637928:AAEbPB5yWWqiXu0s3_VO6E-pO74SBqRkZkM')
-API = 'a6bd4917bfa4dd81b0e524997a79c9c6'
+load_dotenv()
+
+bot_token = os.getenv('bot_token')
+API = os.getenv('weather_api')
+bot = telebot.TeleBot(bot_token)
 
 
 @bot.message_handler(commands=['start'])
