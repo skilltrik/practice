@@ -1,5 +1,6 @@
 import tasks, storage
 
+# Загрузка данных из json файла, и предоставление выбора пользователю для взаимодействия
 def main():
     data_tasks = storage.load()
     while True:
