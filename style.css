@@ -2,6 +2,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   padding-bottom: 70px;
+  color: var(--tg-theme-text-color);
+  background: var(--tg-theme-bg-color);
 }
 header {
   background-color: #4CAF50;
