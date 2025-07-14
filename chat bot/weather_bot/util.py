@@ -2,6 +2,7 @@ import asyncio
 from googletrans import Translator
 from datetime import datetime, timezone, timedelta
 
+# Получение перевода, на англ или на русский
 async def translate(text: str, to_en: bool):
     translator = Translator()
 
@@ -14,8 +15,13 @@ async def translate(text: str, to_en: bool):
 
     return translated.text
 
+# Еще одни танцы с бубнами из-за проблем с асинхронностью.
 def run(city: str, to_en: bool):
     return asyncio.run(translate(city, to_en))
+
+# Здесь мы обрабатываем полученную информацию, в большей части время, которая отображается в секундах с "очень давнего времени"
+# поэтому для перевода в наше привычное время пришлось подшаманить
+# функция также учитывает часовой пояс, для отображения времени в часовом поясе указанного города
 
 def data_processing(data: dict):
     timezone_offset = data['timezone']

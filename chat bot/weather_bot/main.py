@@ -5,8 +5,10 @@ import util
 import os
 from dotenv import load_dotenv
 
+# Загружаем файл с переменными
 load_dotenv()
 
+# Используем их
 bot_token = os.getenv('bot_token')
 API = os.getenv('weather_api')
 bot = telebot.TeleBot(bot_token)
@@ -16,11 +18,13 @@ bot = telebot.TeleBot(bot_token)
 def main(message):
     bot.send_message(message.chat.id, 'Название вашего города: ')
 
-
 @bot.message_handler(content_types=['text'])
 def get_weather(message):
+
+    # Из-за того, что функция синхронная, а перевод текста требует асинхронности, пришлось разделить работу по файлам
     city = util.run(message.text.strip().lower(), True)
 
+    # Происходит две проверки, на правильность ввода названия города внутри блока try и на возможность проблем с подключением в except.
     try:
         res = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API}&units=metric')
 
