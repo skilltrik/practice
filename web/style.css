@@ -6,7 +6,7 @@ body {
   background: var(--tg-theme-bg-color);
 }
 header {
-  background-color: #4CAF50;
+  background-color: var(--tg-theme-header-bg-color);
   color: white;
   text-align: center;
   padding: 20px;
@@ -19,7 +19,7 @@ header {
   padding: 20px;
 }
 .product {
-  border: 1px solid #ddd;
+  border: 1px solid var(--tg-theme-secondary-bg-color);
   border-radius: 12px;
   padding: 10px;
   text-align: center;
