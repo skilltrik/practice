@@ -18,17 +18,20 @@
 
   <!-- Страница корзины -->
   <div id="cart-page" style="display: none; padding: 20px;">
-    <h2>Корзина</h2>
-    <div id="cart-list"></div>
-    <button id="checkout-button" style="margin-top:20px;">Оформить заказ</button>
+    <h2 class="cart-title">Корзина</h2>
+    <hr class="cart-divider">
+    <div id="cart-list" class="cart-list"></div>
+    <button id="checkout-button" class="checkout-btn">Оформить заказ</button>
   </div>
 
   <!-- Страница оформления -->
   <div id="checkout-page" style="display: none; padding: 20px;">
-    <h2>Введите данные</h2>
-    <input type="text" id="name" placeholder="Ваше имя" style="display:block; margin-bottom:10px; width:100%; padding:8px;">
-    <input type="tel" id="phone" placeholder="Ваш номер телефона" style="display:block; margin-bottom:10px; width:100%; padding:8px;">
-    <button id="order-button">Заказать</button>
+    <h2 class="checkout-title">Введите данные</h2>
+    <div class="checkout-form">
+      <input type="text" id="name" placeholder="Ваше имя" class="input-field">
+      <input type="tel" id="phone" placeholder="Ваш номер телефона" class="input-field">
+      <button id="order-button" class="order-btn">Заказать</button>
+    </div>
   </div>
 </body>
 </html>

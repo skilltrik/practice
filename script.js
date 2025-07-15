@@ -70,10 +70,15 @@ cartButton.onclick = () => {
 
 function renderCart() {
   cartList.innerHTML = '';
+  if (Object.keys(cart).length === 0) {
+    cartList.innerHTML = '<p style="text-align:center;">Корзина пуста</p>';
+    return;
+  }
   Object.keys(cart).forEach(id => {
     const product = products.find(p => p.id == id);
     const div = document.createElement('div');
-    div.textContent = `${product.name} x ${cart[id]}`;
+    div.className = 'cart-item';
+    div.textContent = `${product.name} ..... ${cart[id]} шт.`;
     cartList.appendChild(div);
   });
 }
