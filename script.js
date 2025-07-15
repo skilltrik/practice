@@ -110,3 +110,13 @@ document.getElementById('order-button').onclick = () => {
 };
 
 renderProducts();
+
+document.getElementById('back-to-products').onclick = () => {
+  cartPage.style.display = 'none';
+  productsPage.style.display = 'block';
+};
+
+document.getElementById('back-to-cart').onclick = () => {
+  checkoutPage.style.display = 'none';
+  cartPage.style.display = 'block';
+};
