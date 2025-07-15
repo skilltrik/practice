@@ -4,17 +4,31 @@
   <meta charset="UTF-8">
   <title>Skilltrik Shop</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-
   <header>Skilltrik Shop</header>
 
-  <div class="products" id="products-container"></div>
+  <!-- Страница товаров -->
+  <div id="products-page">
+    <div class="products" id="products-container"></div>
+    <button id="cart-button">Перейти в корзину</button>
+  </div>
 
-  <button id="cart-button">Перейти в корзину</button>
+  <!-- Страница корзины -->
+  <div id="cart-page" style="display: none; padding: 20px;">
+    <h2>Корзина</h2>
+    <div id="cart-list"></div>
+    <button id="checkout-button" style="margin-top:20px;">Оформить заказ</button>
+  </div>
 
-  <script src="https://telegram.org/js/telegram-web-app.js?58"></script>
-
+  <!-- Страница оформления -->
+  <div id="checkout-page" style="display: none; padding: 20px;">
+    <h2>Введите данные</h2>
+    <input type="text" id="name" placeholder="Ваше имя" style="display:block; margin-bottom:10px; width:100%; padding:8px;">
+    <input type="tel" id="phone" placeholder="Ваш номер телефона" style="display:block; margin-bottom:10px; width:100%; padding:8px;">
+    <button id="order-button">Заказать</button>
+  </div>
 </body>
 </html>
