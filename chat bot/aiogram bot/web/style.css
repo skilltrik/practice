@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-bottom: 70px;
+  color: var(--tg-theme-text-color);
+  background: var(--tg-theme-bg-color);
+}
+header {
+  background-color: var(--tg-theme-header-bg-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product {
+  border: 1px solid var(--tg-theme-secondary-bg-color);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+.product img {
+  max-width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.cart-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.circle-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
+  font-size: 18px;
+  cursor: pointer;
+}
+.add-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
+}
+#cart-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 25px;
+  font-size: 16px;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Корзина */
+.cart-title {
+  text-align: center;
+  font-size: 22px;
+  color: var(--tg-theme-text-color);
+  margin-bottom: 10px;
+}
+
+.cart-divider {
+  border: none;
+  border-top: 1px dashed var(--tg-theme-hint-color);
+  margin: 10px 0 20px 0;
+}
+
+.cart-list {
+  font-family: monospace;
+  color: var(--tg-theme-text-color);
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 16px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Заголовок */
+.checkout-title {
+  text-align: center;
+  font-size: 22px;
+  color: var(--tg-theme-text-color);
+  margin-bottom: 20px;
+}
+
+/* Контейнер формы */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Поля ввода */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--tg-theme-hint-color);
+  color: var(--tg-theme-text-color);
+  background-color: var(--tg-theme-secondary-bg-color);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-field::placeholder {
+  color: var(--tg-theme-hint-color);
+}
+
+/* При фокусе */
+.input-field:focus {
+  border-color: var(--tg-theme-link-color);
+  box-shadow: 0 0 5px var(--tg-theme-link-color);
+}
+
+/* Кнопка заказа */
+.order-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  font-size: 16px;
+  background: var(--tg-theme-secondary-bg-color);
+  color: var(--tg-theme-link-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background: var(--tg-theme-hint-color);
+}

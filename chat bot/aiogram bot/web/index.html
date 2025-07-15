@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Skilltrik Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>Skilltrik Shop</header>
+
+  <!-- Страница товаров -->
+  <div id="products-page">
+    <div class="products" id="products-container"></div>
+    <button id="cart-button">Перейти в корзину</button>
+  </div>
+
+  <!-- Страница корзины -->
+  <div id="cart-page" style="display: none; padding: 20px;">
+    <button class="back-btn" id="back-to-products">← Назад</button>
+    <h2 class="cart-title">Корзина</h2>
+    <hr class="cart-divider">
+    <div id="cart-list" class="cart-list"></div>
+    <button id="checkout-button" class="checkout-btn">Оформить заказ</button>
+  </div>
+
+  <!-- Страница оформления -->
+  <div id="checkout-page" style="display: none; padding: 20px;">
+    <button class="back-btn" id="back-to-cart">← Назад</button>
+    <h2 class="checkout-title">Введите данные</h2>
+    <div class="checkout-form">
+      <input type="text" id="name" placeholder="Ваше имя" class="input-field">
+      <input type="tel" id="phone" placeholder="Ваш номер телефона" class="input-field">
+      <button id="order-button" class="order-btn">Заказать</button>
+    </div>
+  </div>
+</body>
+</html>
