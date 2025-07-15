@@ -43,8 +43,8 @@ header {
   height: 30px;
   border-radius: 50%;
   border: none;
-  color: var(--tg-theme-text-color);
-  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
   font-size: 18px;
   cursor: pointer;
 }
@@ -54,15 +54,16 @@ header {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  color: var(--tg-theme-text-color);
-  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
 }
 #cart-button {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ff9800;
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
   color: white;
   border: none;
   padding: 14px 28px;
