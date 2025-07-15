@@ -164,3 +164,18 @@ header {
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  font-size: 16px;
+  background: var(--tg-theme-secondary-bg-color);
+  color: var(--tg-theme-link-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background: var(--tg-theme-hint-color);
+}
