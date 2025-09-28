@@ -1,122 +1,61 @@
-const tg = window.Telegram.WebApp;
+// ==== Header скрывается при прокрутке вниз ====
+let lastScrollY = window.scrollY;
+const header = document.getElementById("site-header");
 
-const products = [
-  { id: 1, name: 'Яблоко', image: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg' },
-  { id: 2, name: 'Банан', image: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg' },
-  { id: 3, name: 'Апельсин', image: 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg' },
-  { id: 4, name: 'Клубника', image: 'https://upload.wikimedia.org/wikipedia/commons/2/29/PerfectStrawberry.jpg' }
-];
-
-const cart = {};
-const productsContainer = document.getElementById('products-container');
-const cartButton = document.getElementById('cart-button');
-const productsPage = document.getElementById('products-page');
-const cartPage = document.getElementById('cart-page');
-const checkoutPage = document.getElementById('checkout-page');
-const cartList = document.getElementById('cart-list');
-
-function renderProducts() {
-  productsContainer.innerHTML = '';
-  products.forEach(product => {
-    const count = cart[product.id] || 0;
-    const productEl = document.createElement('div');
-    productEl.className = 'product';
-    productEl.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <h3>${product.name}</h3>
-    `;
-
-    if (count === 0) {
-      const addButton = document.createElement('button');
-      addButton.className = 'add-btn';
-      addButton.textContent = 'Добавить в корзину';
-      addButton.onclick = () => {
-        cart[product.id] = 1;
-        updateCartUI();
-      };
-      productEl.appendChild(addButton);
+window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+        header.classList.add("hide"); // вниз
     } else {
-      const controls = document.createElement('div');
-      controls.className = 'cart-controls';
-      controls.innerHTML = `
-        <button class="circle-btn" onclick="updateCount(${product.id}, -1)">−</button>
-        <span>${count}</span>
-        <button class="circle-btn" onclick="updateCount(${product.id}, 1)">+</button>
-      `;
-      productEl.appendChild(controls);
+        header.classList.remove("hide"); // вверх
     }
+    lastScrollY = window.scrollY;
+});
 
-    productsContainer.appendChild(productEl);
-  });
+// ==== Эффект "главного пункта" в программе ====
+document.addEventListener("scroll", function () {
+    const items = document.querySelectorAll(".program-list li");
+    const centerY = window.scrollY + window.innerHeight / 2;
+    items.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        const top = rect.top + window.scrollY;
+        const bottom = top + rect.height;
+        if (centerY >= top && centerY <= bottom) item.classList.add("active");
+        else item.classList.remove("active");
+    });
+});
+
+// ==== Галерея с "выделенной" центральной картинкой ====
+const galleryItems = document.querySelectorAll(".gallery-item");
+const leftArrow = document.querySelector(".gallery-arrow.left");
+const rightArrow = document.querySelector(".gallery-arrow.right");
+
+let currentIndex = 0;
+
+function updateGallery() {
+    galleryItems.forEach((item, index) => {
+        item.classList.remove("center", "left", "right", "hidden");
+
+        if (index === currentIndex) {
+            item.classList.add("center");
+        } else if (index === (currentIndex - 1 + galleryItems.length) % galleryItems.length) {
+            item.classList.add("left");
+        } else if (index === (currentIndex + 1) % galleryItems.length) {
+            item.classList.add("right");
+        } else {
+            item.classList.add("hidden");
+        }
+    });
 }
 
-function updateCount(id, delta) {
-  cart[id] = (cart[id] || 0) + delta;
-  if (cart[id] <= 0) delete cart[id];
-  updateCartUI();
-}
+leftArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    updateGallery();
+});
 
-function updateCartUI() {
-  renderProducts();
-  const totalItems = Object.values(cart).reduce((sum, val) => sum + val, 0);
-  cartButton.style.display = totalItems > 0 ? 'block' : 'none';
-}
+rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    updateGallery();
+});
 
-cartButton.onclick = () => {
-  productsPage.style.display = 'none';
-  cartPage.style.display = 'block';
-  renderCart();
-};
-
-function renderCart() {
-  cartList.innerHTML = '';
-  if (Object.keys(cart).length === 0) {
-    cartList.innerHTML = '<p style="text-align:center;">Корзина пуста</p>';
-    return;
-  }
-  Object.keys(cart).forEach(id => {
-    const product = products.find(p => p.id == id);
-    const div = document.createElement('div');
-    div.className = 'cart-item';
-    div.textContent = `${product.name} ..... ${cart[id]} шт.`;
-    cartList.appendChild(div);
-  });
-}
-
-document.getElementById('checkout-button').onclick = () => {
-  cartPage.style.display = 'none';
-  checkoutPage.style.display = 'block';
-};
-
-document.getElementById('order-button').onclick = () => {
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  if (!name || !phone) {
-    alert('Заполните все поля');
-    return;
-  }
-
-  const orderData = {
-    name,
-    phone,
-    cart: Object.keys(cart).map(id => ({
-      name: products.find(p => p.id == id).name,
-      quantity: cart[id]
-    }))
-  };
-
-  tg.sendData(JSON.stringify(orderData)); // Отправка данных в бота
-  tg.close(); // Закрыть WebApp
-};
-
-renderProducts();
-
-document.getElementById('back-to-products').onclick = () => {
-  cartPage.style.display = 'none';
-  productsPage.style.display = 'block';
-};
-
-document.getElementById('back-to-cart').onclick = () => {
-  checkoutPage.style.display = 'none';
-  cartPage.style.display = 'block';
-};
+// Инициализация
+updateGallery();

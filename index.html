@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Skilltrik Shop</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Курсы швейного дела — Визитка</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>Skilltrik Shop</header>
+    <header id="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="#hero">
+                    <img src="https://i.pinimg.com/1200x/db/64/d0/db64d0dd4cd12d0e97040c7e6752e349.jpg" 
+                         alt="Логотип курсов" style="border-radius:50%;">
+                </a>
+            </div>
+            <nav class="top-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="#about">О курсах</a></li>
+                    <li><a href="#program">Программа</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Курсы швейного дела в Дагестане</h1>
+                <p>Откройте для себя мир ткани, стежков и творчества — шаг за шагом вместе с нами.</p>
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Швейное творчество" class="hero-img">
+            </div>
+        </section>
 
-  <!-- Страница товаров -->
-  <div id="products-page">
-    <div class="products" id="products-container"></div>
-    <button id="cart-button">Перейти в корзину</button>
-  </div>
+        <section id="about">
+            <h2>О курсах</h2>
+            <p>Наши курсы созданы для начинающих и тех, кто хочет поднять навык на новый уровень. 
+            Преподавание — практическое, с индивидуальным подходом и подробными домашними заданиями.</p>
+            <p>Даты и группы обновляются ежемесячно. В программе — техника шитья, крой, лекала, работа с разными тканями,
+            простая одежда и аксессуары, методы отделки и подгонки под фигуру.</p>
+        </section>
 
-  <!-- Страница корзины -->
-  <div id="cart-page" style="display: none; padding: 20px;">
-    <button class="back-btn" id="back-to-products">← Назад</button>
-    <h2 class="cart-title">Корзина</h2>
-    <hr class="cart-divider">
-    <div id="cart-list" class="cart-list"></div>
-    <button id="checkout-button" class="checkout-btn">Оформить заказ</button>
-  </div>
+        <section id="program">
+            <h2>Программа обучения</h2>
+            <ul class="program-list">
+                <li>Введение в инструменты и материалы</li>
+                <li>Работа со швейной машиной</li>
+                <li>Крой и лекала</li>
+                <li>Пошив базовых моделей</li>
+                <li>Отделка и специфические техники</li>
+            </ul>
+        </section>
 
-  <!-- Страница оформления -->
-  <div id="checkout-page" style="display: none; padding: 20px;">
-    <button class="back-btn" id="back-to-cart">← Назад</button>
-    <h2 class="checkout-title">Введите данные</h2>
-    <div class="checkout-form">
-      <input type="text" id="name" placeholder="Ваше имя" class="input-field">
-      <input type="tel" id="phone" placeholder="Ваш номер телефона" class="input-field">
-      <button id="order-button" class="order-btn">Заказать</button>
+        <section id="gallery">
+            <h2>Галерея работ</h2>
+            <div class="gallery-wrapper">
+                <button class="gallery-arrow left">&#10094;</button>
+
+                <div class="gallery-container">
+                    <div class="gallery-item"><img src="img/work1.jpg" alt="Работа 1"></div>
+                    <div class="gallery-item"><img src="img/work2.jpg" alt="Работа 2"></div>
+                    <div class="gallery-item"><img src="img/work3.jpg" alt="Работа 3"></div>
+                </div>
+
+                <button class="gallery-arrow right">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Email: kursy@sheila.ru</p>
+            <p>Адрес: Республика Дагестан, г. Махачкала</p>
+        </section>
     </div>
-  </div>
+    <footer>
+        <p>© 2025 Курсы швейного дела. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
