@@ -7,6 +7,9 @@ body {
     background-size: cover;
 }
 
+
+
+
 /* HEADER */
 header {
     background: #f0e8df;
@@ -44,6 +47,8 @@ header.hide {
     padding-bottom: 3%;
 }
 
+
+
 /* Меню */
 .top-nav li {
     display: inline-block;
@@ -68,6 +73,8 @@ header.hide {
     transform: scale(1.05);
 }
 
+
+
 /* HERO */
 section {
     padding: 5% 10%;
@@ -75,12 +82,57 @@ section {
 
 #hero {
     background: #faf5f1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
 }
 
 .hero-img {
     width: 100%;
     border-radius: 12px;
 }
+
+
+
+
+#why-us {
+    background: #f9f3ef;
+    padding: 5% 10%;
+    border-radius: 12px;
+    margin: 40px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#why-us h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #b79984;
+}
+
+.why-us-list {
+    list-style: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.why-us-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.why-us-list li::before {
+    content: "✔";
+    color: #b79984;
+    position: absolute;
+    left: 0;
+}
+
+
+
+
 
 /* PROGRAM */
 .program-list {
@@ -101,6 +153,56 @@ section {
     transform: scale(1.05);
     background-color: #e0c8b0;
 }
+
+
+#course-options {
+    padding: 5% 10%;
+    background: #faf5f1;
+    border-radius: 12px;
+    margin: 40px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#course-options h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #b79984;
+}
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.course-card h3 {
+    color: #b79984;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    margin: 6px 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+
 
 /* GALLERY */
 .gallery-wrapper {
@@ -191,12 +293,14 @@ section {
 }
 
 .gallery-arrow:hover {
-    background: rgba(255,255,255,1);
-    transform: scale(1);
+    background-color: #e0c8b0;
 }
 
 .gallery-arrow.left { left: -50px; }
 .gallery-arrow.right { right: -50px; }
+
+
+
 
 
 /* FOOTER */
