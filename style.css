@@ -12,6 +12,7 @@ body {
 
 /* HEADER */
 header {
+    font-size: 20px;
     background: #f0e8df;
     padding: 2% 5%;
     position: sticky;
@@ -86,6 +87,14 @@ section {
     border-radius: 12px;
 }
 
+#hero p{
+    font-size: 20px;
+}
+
+#hero h1 {
+    font-size: 40px;
+}
+
 .hero-img {
     width: 100%;
     border-radius: 12px;
@@ -96,7 +105,7 @@ section {
 
 #why-us {
     background: #f9f3ef;
-    padding: 5% 10%;
+    padding: 2% 10% 5%;
     border-radius: 12px;
     margin: 40px 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -104,7 +113,7 @@ section {
 
 #why-us h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 40px;
     margin-bottom: 20px;
     color: #b79984;
 }
@@ -117,7 +126,7 @@ section {
 }
 
 .why-us-list li {
-    font-size: 1.1em;
+    font-size: 20px;
     margin: 10px 0;
     padding-left: 20px;
     position: relative;
@@ -135,9 +144,18 @@ section {
 
 
 /* PROGRAM */
+
+#program {
+    padding: 2% 10%;
+}
 .program-list {
     list-style: none;
     padding: 0;
+}
+
+#program h2 {
+    font-size: 40px;
+    text-align: center;
 }
 
 .program-list li {
@@ -156,7 +174,7 @@ section {
 
 
 #course-options {
-    padding: 5% 10%;
+    padding: 2% 10% 5%;
     background: #faf5f1;
     border-radius: 12px;
     margin: 40px 0;
@@ -165,7 +183,7 @@ section {
 
 #course-options h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 40px;
     margin-bottom: 30px;
     color: #b79984;
 }
@@ -192,26 +210,32 @@ section {
 }
 
 .course-card h3 {
+    text-align: center;
     color: #b79984;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
 .course-card p {
+    text-align: center;
     margin: 6px 0;
-    font-size: 0.95em;
+    font-size: 20px;
     line-height: 1.4;
 }
 
-
-
 /* GALLERY */
-.gallery-wrapper {
+/* .gallery-wrapper {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px 0;
+}
+
+#gallery h2{
+    font-size: 40px;
+    text-align: center;
 }
 
 .gallery-container {
@@ -239,7 +263,6 @@ section {
     display: block;
 }
 
-/* Центральная картинка */
 .gallery-item.center {
     opacity: 1;
     transform: scale(1);
@@ -249,7 +272,6 @@ section {
     transform: translate(-50%, -50%) scale(2);
 }
 
-/* Левая картинка */
 .gallery-item.left {
     opacity: 0.5;
     transform: translate(-150%, -50%) scale(1.5);
@@ -258,7 +280,6 @@ section {
     top: 50%;
 }
 
-/* Правая картинка */
 .gallery-item.right {
     opacity: 0.5;
     transform: translate(50%, -50%) scale(1.5);
@@ -267,7 +288,6 @@ section {
     top: 50%;
 }
 
-/* Скрытые */
 .gallery-item.hidden {
     opacity: 0;
     transform: scale(0.5);
@@ -276,14 +296,13 @@ section {
     top: 50%;
 }
 
-/* Стрелки */
 .gallery-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255,255,255,0.8);
     border: none;
-    font-size: 2rem;
+    font-size: 20px;
     cursor: pointer;
     padding: 0.5em 1em;
     border-radius: 50%;
@@ -297,7 +316,7 @@ section {
 }
 
 .gallery-arrow.left { left: -50px; }
-.gallery-arrow.right { right: -50px; }
+.gallery-arrow.right { right: -50px; } */
 
 
 /* Модальное окно */
@@ -333,8 +352,16 @@ section {
 
 
 /* FOOTER */
-#contacts {
+#contacts{
     text-align: center;
+}
+
+#contacts h2{
+    font-size: 40px;
+}
+
+#contacts{
+    font-size: 20px;
 }
 
 footer {
@@ -364,22 +391,460 @@ footer {
     transition:transform .5s cubic-bezier(.22,.9,.32,1)
 }
 
-.carousel-item{min-width:100%; box-sizing:border-box; padding:40px; background:var(--bg); border-radius:12px; box-shadow:var(--card-shadow)}
-.showcase-wrapper{display:flex; gap:30px; align-items:flex-start}
-.showcase-left{flex:1}
-.showcase-left .showcase-main{width:100%; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:opacity .25s}
-.showcase-right{flex:1; display:flex; flex-direction:column; align-items:center; text-align:center}
-.showcase-thumbs{display:grid; grid-template-columns:repeat(3,120px); grid-auto-rows:80px; gap:10px; justify-content:center; margin-bottom:20px}
-.showcase-thumbs img{width:120px; height:80px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:transform .2s; cursor:pointer}
-.showcase-thumbs img:hover{transform:scale(1.05)}
+.carousel-item{
+    min-width:100%; 
+    box-sizing:border-box; 
+    padding:40px; 
+    background:var(--bg); 
+    border-radius:12px; 
+    box-shadow:var(--card-shadow)
+}
+
+.showcase-wrapper{
+    display:flex; 
+    gap:30px; 
+    align-items:flex-start
+}
+
+.showcase-left{
+    flex:1
+}
+
+.showcase-left .showcase-main{
+    width:auto; 
+    height:600px; 
+    border-radius:12px; 
+    box-shadow:0 4px 12px rgba(0,0,0,0.15); 
+    transition:opacity .25s
+}
+
+.showcase-right{
+    flex:1; 
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    text-align:center
+}
+
+.showcase-thumbs{
+    display:grid; 
+    grid-template-columns:repeat(3,120px); 
+    grid-auto-rows:80px; 
+    gap:10px; 
+    justify-content:center; 
+    margin-bottom:20px
+}
+
+.showcase-thumbs img{
+    width:120px; 
+    height:80px; 
+    object-fit:cover; 
+    border-radius:8px; 
+    box-shadow:0 2px 8px rgba(0,0,0,0.1); 
+    transition:transform .2s; 
+    cursor:pointer
+}
+
+.showcase-thumbs img:hover{
+    transform:scale(1.05)
+}
+
 /* .showcase-text h3{color:var(--accent); margin-bottom:10px} */
-.showcase-text p{font-size:1em; line-height:1.5; color:#333}
-.carousel-arrow{position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:999px; background:#fff; border:1px solid rgba(0,0,0,0.06); box-shadow:0 6px 18px rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center; font-size:28px; cursor:pointer}
-.carousel-arrow.left{left:-50px}
-.carousel-arrow.right{right:-50px}
-.carousel-arrow:focus{outline:3px solid rgba(183,153,132,0.2)}
+
+.showcase-text p{
+    font-size:20px; 
+    line-height:1.5; 
+    color:#333
+}
+
+.carousel-arrow{
+    position:absolute; 
+    top:50%; transform:translateY(-50%); 
+    width:48px; height:48px; 
+    border-radius:999px; 
+    background:#fff; 
+    border:1px solid rgba(0,0,0,0.06); 
+    box-shadow:0 6px 18px rgba(0,0,0,0.08); 
+    display:flex; align-items:center; 
+    justify-content:center; 
+    font-size:28px; 
+    cursor:pointer
+}
+
+.carousel-arrow.left{
+    left:-50px
+}
+
+.carousel-arrow.right{
+    right:-50px
+}
+
+.carousel-arrow:focus{
+    outline:3px solid rgba(183,153,132,0.2)
+}
+
 #showcaseCarousel h3{
     text-align: center;
-    font-size: 2em;
+    font-size: 40px;
     margin-bottom: 20px;
+}
+
+
+
+.header-inner {
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+.top-nav ul { margin: 0; padding: 0; display: flex; gap: 10px; align-items:center; }
+.top-nav li { display: inline-block; }
+
+#hero { padding: 4% 6%; }
+.hero-content h1 { font-size: clamp(1.3rem, 4vw, 2rem); line-height: 1.15; }
+.hero-img { max-height: 380px; object-fit: cover; }
+
+@media (max-width: 1200px) {
+    .showcase-thumbs img{
+        width:100px; 
+        height:80px; 
+    }
+    .showcase-thumbs{
+        grid-template-columns:repeat(2,100px); 
+    }
+}
+/* Меню: скрываем пункты и показываем гамбургер */
+@media (max-width: 768px) {
+  .top-nav { position: absolute; right: 18px; top: 70px; background: rgba(255,255,255,0.95); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: none; padding: 10px; }
+  .top-nav.open { display: block; }
+  .top-nav ul { flex-direction: column; gap: 8px; }
+  .nav-toggle { display: inline-flex; }
+  .logo img { width: 64px; }
+}
+
+/* Мелкие экраны: padding всего сайта меньше */
+@media (max-width: 420px) {
+  body { font-size: 15px; }
+  header { padding: 12px 14px; }
+  .main-container { padding: 12px; margin: 12px; border-radius: 8px; }
+  section { padding: 18px 12px; }
+  .nav-toggle { font-size: 1.2rem; padding: 4px; }
+}
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 90%; /* чуть больше, чтобы контакты были читаемыми */
+    }
+
+    body {
+        /* можно не использовать transform, чтобы не ломать layout */
+    }
+
+    /* Hero */
+    #hero .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* центр по горизонтали */
+        justify-content: center; /* центр по вертикали */
+        text-align: center;
+    }
+
+    .hero-img {
+        max-width: 80%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 20px 0;
+    }
+
+    /* Контакты */
+    #contacts {
+        font-size: 1.5rem; /* чуть больше, чтобы был читаемым */
+        line-height: 1.6;
+    }
+
+    #contacts p {
+        margin: 8px 0;
+    }
+
+    /* Шрифты заголовков */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.6rem; }
+
+    /* Секции и отступы */
+    section {
+        padding: 3% 6%;
+    }
+
+    /* Карточки курсов */
+    .course-card {
+        width: 280px;
+        padding: 16px;
+    }
+
+    /* Сетка мини-картинок в карусели */
+    .showcase-thumbs {
+        grid-template-columns: repeat(2, 100px);
+        grid-auto-rows: 70px;
+        gap: 8px;
+    }
+
+    .showcase-thumbs img {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+/* ==== Tablets Landscape (1024px — 1280px) ==== */
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+    html {
+        font-size: 92%; /* чуть меньше базового, но читаемо */
+    }
+
+    /* Hero */
+    #hero .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* центр по горизонтали */
+        justify-content: center; /* центр по вертикали */
+        text-align: center;
+    }
+
+    .hero-img {
+        max-width: 85%;
+        max-height: 360px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 16px 0;
+    }
+
+    /* Контакты */
+    #contacts {
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+
+    #contacts p {
+        margin: 6px 0;
+    }
+
+    /* Заголовки */
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+
+    /* Секции и отступы */
+    section {
+        padding: 3% 5%;
+    }
+
+    /* Карточки курсов */
+    .course-card {
+        width: 240px;
+        padding: 18px;
+    }
+
+    /* Сетка мини-картинок в карусели */
+    .showcase-thumbs {
+        grid-template-columns: repeat(2, 100px);
+        grid-auto-rows: 70px;
+        gap: 8px;
+    }
+
+    .showcase-thumbs img {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 910px) and (max-width: 1023px) {
+
+    html {
+        font-size: 88%; /* чуть меньше, чем на больших планшетах */
+    }
+
+    /* Hero */
+    #hero .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-img {
+        max-width: 90%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 14px 0;
+    }
+
+    /* Контакты */
+    #contacts {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    #contacts p {
+        margin: 5px 0;
+    }
+
+    /* Заголовки */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; }
+
+    /* Секции и отступы */
+    section {
+        padding: 3% 4%;
+    }
+
+    /* Карточки курсов */
+    .course-card {
+        width: 260px;
+        padding: 16px;
+    }
+
+    .showcase-wrapper {
+        flex-direction: column; /* главный блок вертикально */
+        align-items: center; /* по центру */
+        gap: 20px;
+    }
+
+    .showcase-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .showcase-left .showcase-main {
+        height: 600px;
+        margin: 0 auto;
+    }
+
+    .showcase-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .showcase-thumbs {
+        display: flex; /* горизонтально */
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap; /* чтобы при переполнении переходили на новую строку */
+        margin-bottom: 10px;
+    }
+
+    .showcase-thumbs img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    .showcase-text p {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 909px) {
+    .showcase-wrapper {
+        flex-direction: column; /* главный блок сверху */
+        align-items: center;
+    }
+
+    .showcase-left .showcase-main {
+        height: 450px;
+    }
+
+    .showcase-thumbs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .showcase-thumbs img {
+        width: 80px;
+        height: 70px;
+    }
+
+    .showcase-text p {
+        font-size: 19px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Tablets Portrait / Small Tablets (600px – 767px) */
+@media (max-width: 767px) {
+    .showcase-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showcase-left .showcase-main {
+        height: 350px;
+    }
+
+    .showcase-thumbs {
+        grid-template-columns: repeat(5, minmax(70px, 1fr));
+        grid-auto-rows: 60px;
+        margin: 10px 0;
+    }
+
+    .showcase-thumbs img {
+        width: 70px;
+        height: 60px;
+    }
+
+    .showcase-text p {
+        font-size: 19px;
+        text-align: center;
+    }
+}
+
+/* Мобильные телефоны (под 599px) */
+@media (max-width: 599px) {
+    .showcase-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showcase-left .showcase-main {
+        height: 400px;
+        max-height: 300px;
+    }
+
+    .showcase-thumbs {
+        grid-template-columns: repeat(4, minmax(60px, 1fr));
+        grid-auto-rows: 50px;
+        margin: 10px 0;
+    }
+
+    .showcase-thumbs img {
+        width: 60px;
+        height: 50px;
+    }
+
+    .showcase-text p {
+        font-size: 14px;
+        text-align: center;
+    }
 }

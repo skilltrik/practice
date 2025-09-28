@@ -139,3 +139,34 @@ el.addEventListener('touchend', ()=>{ if(dx>threshold) btnPrev.click(); else if(
 
 update();
 })();
+
+
+
+
+
+
+// toggle mobile menu
+(function(){
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.top-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', (e) => {
+    nav.classList.toggle('open');
+    btn.classList.toggle('active');
+    // чтобы клик по пустому месту закрывал меню
+    if (nav.classList.contains('open')) {
+      setTimeout(() => {
+        document.addEventListener('click', closeOnOutside);
+      }, 0);
+    } else {
+      document.removeEventListener('click', closeOnOutside);
+    }
+  });
+  function closeOnOutside(e){
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.classList.remove('active');
+      document.removeEventListener('click', closeOnOutside);
+    }
+  }
+})();
