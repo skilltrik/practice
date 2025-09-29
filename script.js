@@ -170,3 +170,27 @@ update();
     }
   }
 })();
+
+document.querySelectorAll('.toggle-details').forEach(button => {
+    button.addEventListener('click', () => {
+        const card = button.closest('.course-card');
+        const details = card.querySelector('.course-details');
+
+        // закрываем все открытые
+        document.querySelectorAll('.course-details').forEach(d => {
+            if (d !== details) {
+                d.style.display = 'none';
+                d.previousElementSibling.textContent = 'Посмотреть подробнее';
+            }
+        });
+
+        // переключаем текущее
+        if (details.style.display === 'block') {
+            details.style.display = 'none';
+            button.textContent = 'Посмотреть подробнее';
+        } else {
+            details.style.display = 'block';
+            button.textContent = 'Скрыть';
+        }
+    });
+});

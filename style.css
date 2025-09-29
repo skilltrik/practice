@@ -3,14 +3,21 @@ body {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     color: #333;
-    background: url('img/bg.jpg') no-repeat center center fixed;
     background-size: cover;
     box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  body {
+    background: url('img/bg.webp') no-repeat center center fixed; /* вместо fixed */
+    background-size: cover;
+  }
+}
+
+
 * {
     box-sizing: border-box;
-    outline: 1px solid red; /* временно для отладки */
+
 }
 
 section, .container, .wrapper {
@@ -21,7 +28,8 @@ section, .container, .wrapper {
 }
 
 
-/* HEADER */
+/* #HEADER */
+
 header {
     font-size: 20px;
     background: #f0e8df;
@@ -60,8 +68,8 @@ header.hide {
 }
 
 
-
 /* Меню */
+
 .top-nav li {
     display: inline-block;
     white-space: nowrap;
@@ -88,6 +96,7 @@ header.hide {
 
 
 /* HERO */
+
 section {
     padding: 5% 10%;
 }
@@ -113,6 +122,7 @@ section {
 
 
 
+/* WHY US */
 
 #why-us {
     background: #f9f3ef;
@@ -159,6 +169,7 @@ section {
 #program {
     padding: 2% 10%;
 }
+
 .program-list {
     list-style: none;
     padding: 0;
@@ -184,12 +195,18 @@ section {
 }
 
 
+/* COURSE OPTIONS */
+
 #course-options {
     padding: 2% 10% 5%;
     background: #faf5f1;
     border-radius: 12px;
     margin: 40px 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#course-options ul li {
+    font-size: 20px;
 }
 
 #course-options h2 {
@@ -201,6 +218,7 @@ section {
 
 .course-cards {
     display: flex;
+    align-items: flex-start; /* ключ! чтобы высота не выравнивалась */
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -210,7 +228,7 @@ section {
     background: #fff;
     border-radius: 12px;
     padding: 20px;
-    width: 280px;
+    width: 350px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -233,6 +251,33 @@ section {
     font-size: 20px;
     line-height: 1.4;
 }
+
+.course-details {
+  display: none; /* скрыто по умолчанию */
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.toggle-details {
+  margin: 10px 0;
+  padding: 8px 14px;
+  border: none;
+  background: #b79984;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-details:hover {
+  background: #a07f69;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 /* GALLERY */
 /* .gallery-wrapper {
@@ -361,7 +406,6 @@ section {
 }
 
 
-
 /* FOOTER */
 #contacts{
     text-align: center;
@@ -382,7 +426,6 @@ footer {
     font-size: 100%;
     color: #555;
 }
-
 
 
 /* SHOWCASE */
@@ -550,134 +593,6 @@ footer {
   .nav-toggle { font-size: 1.2rem; padding: 4px; }
 }
 
-@media (max-width: 1280px) {
-    html {
-        font-size: 90%; /* чуть больше, чтобы контакты были читаемыми */
-    }
-
-    body {
-        /* можно не использовать transform, чтобы не ломать layout */
-    }
-
-    /* Hero */
-    #hero .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* центр по горизонтали */
-        justify-content: center; /* центр по вертикали */
-        text-align: center;
-    }
-
-    .hero-img {
-        max-width: 80%;
-        max-height: 400px;
-        object-fit: cover;
-        border-radius: 12px;
-        margin: 20px 0;
-    }
-
-    /* Контакты */
-    #contacts {
-        font-size: 1.5rem; /* чуть больше, чтобы был читаемым */
-        line-height: 1.6;
-    }
-
-    #contacts p {
-        margin: 8px 0;
-    }
-
-    /* Шрифты заголовков */
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.6rem; }
-
-    /* Секции и отступы */
-    section {
-        padding: 3% 6%;
-    }
-
-    /* Карточки курсов */
-    .course-card {
-        width: 280px;
-        padding: 16px;
-    }
-
-    /* Сетка мини-картинок в карусели */
-    .showcase-thumbs {
-        grid-template-columns: repeat(2, 100px);
-        grid-auto-rows: 70px;
-        gap: 8px;
-    }
-
-    .showcase-thumbs img {
-        width: 100px;
-        height: 70px;
-    }
-}
-
-/* ==== Tablets Landscape (1024px — 1280px) ==== */
-@media (min-width: 1024px) and (max-width: 1280px) {
-
-    html {
-        font-size: 92%; /* чуть меньше базового, но читаемо */
-    }
-
-    /* Hero */
-    #hero .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* центр по горизонтали */
-        justify-content: center; /* центр по вертикали */
-        text-align: center;
-    }
-
-    .hero-img {
-        max-width: 85%;
-        max-height: 360px;
-        object-fit: cover;
-        border-radius: 12px;
-        margin: 16px 0;
-    }
-
-    /* Контакты */
-    #contacts {
-        font-size: 1.25rem;
-        line-height: 1.6;
-    }
-
-    #contacts p {
-        margin: 6px 0;
-    }
-
-    /* Заголовки */
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
-    h3 { font-size: 1.5rem; }
-
-    /* Секции и отступы */
-    section {
-        padding: 3% 5%;
-    }
-
-    /* Карточки курсов */
-    .course-card {
-        width: 240px;
-        padding: 18px;
-    }
-
-    /* Сетка мини-картинок в карусели */
-    .showcase-thumbs {
-        grid-template-columns: repeat(2, 100px);
-        grid-auto-rows: 70px;
-        gap: 8px;
-    }
-
-    .showcase-thumbs img {
-        width: 100px;
-        height: 70px;
-    }
-}
-
 @media (min-width: 910px) and (max-width: 1023px) {
 
     html {
@@ -805,6 +720,16 @@ footer {
 
 /* Tablets Portrait / Small Tablets (600px – 767px) */
 @media (max-width: 767px) {
+    .main-container {
+    width: 100%;
+    }
+        body {
+        background: none !important; /* убираем фоновое изображение */
+        width: 100%;
+        min-height: 100vh; /* тело растягивается на весь экран */
+        margin: 0;
+        padding: 0;
+    }
     .showcase-wrapper {
         flex-direction: column;
         align-items: center;
@@ -829,7 +754,28 @@ footer {
         font-size: 19px;
         text-align: center;
     }
+
+    .carousel-arrow {
+        position: absolute;
+        top: 40%; /* центр по вертикали блока */
+        transform: translateY(-50%); /* корректировка */
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+        z-index: 10;
+    }
+
+    .carousel-arrow.left {
+        left: 30px; /* отступ слева */
+    }
+
+    .carousel-arrow.right {
+        right: 30px; /* отступ справа */
+    }
+
+
 }
+
 
 /* Мобильные телефоны (под 599px) */
 @media (max-width: 599px) {
