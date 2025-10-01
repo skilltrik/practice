@@ -12,19 +12,24 @@
     <header id="site-header">
         <div class="header-inner">
             <div class="logo">
-                <a href="#hero">
-                    <img src="https://i.pinimg.com/1200x/db/64/d0/db64d0dd4cd12d0e97040c7e6752e349.jpg"
-                        alt="Логотип курсов" style="border-radius:50%;">
-                </a>
+            <a href="#hero">
+                <img src="https://i.pinimg.com/1200x/db/64/d0/db64d0dd4cd12d0e97040c7e6752e349.jpg"
+                    alt="Логотип курсов" style="border-radius:50%;">
+            </a>
+            <span class="logo-text">N_H_Studio_</span>
             </div>
-            <button class="nav-toggle" aria-label="Открыть меню">☰</button>
+            <button class="nav-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="top-nav" aria-label="Главное меню">
-                <ul>
-                    <li><a href="#showcaseCarousel">О курсах</a></li>
-                    <li><a href="#program">Программа</a></li>
-                    <li><a href="#gallery">Галерея</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
+            <ul>
+                <li><a href="#showcaseCarousel">О курсах</a></li>
+                <li><a href="#program">Программа</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a class="whatsapp-btn">Написать в WhatsApp</a></li>
+            </ul>
             </nav>
         </div>
     </header>
@@ -59,6 +64,11 @@
                                 <img data-large="img/folder/kurs3.webp" src="img/folder/kurs3.webp" alt="Мини 3">
                                 <img data-large="img/folder/kurs4.webp" src="img/folder/kurs4.webp" alt="Мини 4">
                                 <img data-large="img/folder/kurs5.webp" src="img/folder/kurs5.webp" alt="Мини 5">
+                                <img data-large="img/folder/kurs6.webp" src="img/folder/kurs6.webp" alt="Мини 6">
+                                <img data-large="img/folder/kurs7.webp" src="img/folder/kurs7.webp" alt="Мини 7">
+                                <img data-large="img/folder/kurs8.webp" src="img/folder/kurs8.webp" alt="Мини 8">
+                                <img data-large="img/folder/kurs9.webp" src="img/folder/kurs9.webp" alt="Мини 9">
+                                <img data-large="img/folder/kurs10.webp" src="img/folder/kurs10.webp" alt="Мини 10">
                             </div>
                             <div class="showcase-text">
                                 <p>Наши курсы созданы для начинающих и тех, кто хочет поднять навык на новый уровень. Преподавание — практическое, с индивидуальным подходом и подробными домашними заданиями.</p>
@@ -249,26 +259,12 @@
             </div>
         </section>
 
-        <!-- <section id="gallery">
-            <h2>Галерея работ</h2>
-            <div class="gallery-wrapper">
-                <button class="gallery-arrow left">&#10094;</button>
-
-                <div class="gallery-container">
-                    <div class="gallery-item"><img src="img/work1.jpg" alt="Работа 1"></div>
-                    <div class="gallery-item"><img src="img/work2.jpg" alt="Работа 2"></div>
-                    <div class="gallery-item"><img src="img/work3.jpg" alt="Работа 3"></div>
-                </div>
-
-                <button class="gallery-arrow right">&#10095;</button>
-            </div>
-        </section> -->
-
         <section id="contacts">
             <h2>Контакты</h2>
             <p>Телефон: +7 (123) 456-78-90</p>
-            <p>Email: kursy@sheila.ru</p>
-            <p>Адрес: Республика Дагестан, г. Махачкала</p>
+            <a class="whatsapp-btn">Написать нам в WhatsApp</a>
+            <p id="address">Адрес: Республика Дагестан, г.Махачкала, Гамидова 21а</p>
+            <a id="showMap" class="map-btn" target="_blank" rel="noopener noreferrer">Показать на карте</a>
         </section>
     </div>
     <footer>
@@ -276,10 +272,7 @@
     </footer>
 
     <script src="script.js"></script>
-    
-    <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-img" src="" alt="Увеличенное изображение">
+
 </div>
 </body>
 

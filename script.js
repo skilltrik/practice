@@ -24,71 +24,6 @@ document.addEventListener("scroll", function () {
     });
 });
 
-// ==== Галерея с "выделенной" центральной картинкой ====
-document.addEventListener('DOMContentLoaded', () => {
-    const galleryItems = document.querySelectorAll(".gallery-item");
-    const leftArrow = document.querySelector(".gallery-arrow.left");
-    const rightArrow = document.querySelector(".gallery-arrow.right");
-
-    let currentIndex = 0;
-
-    function updateGallery() {
-        galleryItems.forEach((item, index) => {
-            item.classList.remove("center", "left", "right", "hidden");
-
-            if (index === currentIndex) {
-                item.classList.add("center");
-            } else if (index === (currentIndex - 1 + galleryItems.length) % galleryItems.length) {
-                item.classList.add("left");
-            } else if (index === (currentIndex + 1) % galleryItems.length) {
-                item.classList.add("right");
-            } else {
-                item.classList.add("hidden");
-            }
-        });
-    }
-
-    leftArrow.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-        updateGallery();
-    });
-
-    rightArrow.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % galleryItems.length;
-        updateGallery();
-    });
-
-    // Инициализация
-    updateGallery();
-
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.querySelector('.lightbox-img');
-    const closeBtn = document.querySelector('.lightbox .close');
-
-    // Вешаем клик на все картинки галереи
-    document.querySelectorAll('.gallery-item img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightbox.style.display = 'flex';
-            lightboxImg.src = img.src;
-        });
-    });
-
-    // Закрытие по крестику
-    closeBtn.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
-
-    // Закрытие при клике вне картинки
-    lightbox.addEventListener('click', e => {
-        if (e.target === lightbox) {
-            lightbox.style.display = 'none';
-        }
-    });
-});
-
-
-
-
 (function(){
 const carousel = document.getElementById('showcaseCarousel');
 const track = carousel.querySelector('.carousel-track');
@@ -140,11 +75,6 @@ el.addEventListener('touchend', ()=>{ if(dx>threshold) btnPrev.click(); else if(
 update();
 })();
 
-
-
-
-
-
 // toggle mobile menu
 (function(){
   const btn = document.querySelector('.nav-toggle');
@@ -193,4 +123,17 @@ document.querySelectorAll('.toggle-details').forEach(button => {
             button.textContent = 'Скрыть';
         }
     });
+});
+
+
+const phone = "79894689525"; 
+const text = "Здравствуйте! Хочу записаться на курс.";
+document.querySelectorAll(".whatsapp-btn").forEach(link => {
+  link.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+});
+
+const address = document.getElementById('address').textContent;
+document.getElementById('showMap').addEventListener('click', () => {
+    const url = `https://2gis.ru/search/${encodeURIComponent(address)}`;
+    window.open(url, '_blank');
 });
