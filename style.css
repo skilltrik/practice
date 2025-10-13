@@ -9,7 +9,7 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background: url('img/bg.webp') no-repeat center center fixed; /* вместо fixed */
+    background: url('img/bg.webp') no-repeat center center fixed; 
     background-size: cover;
   }
 }
@@ -24,16 +24,15 @@ section, .container, .wrapper {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 10px; /* или другой отступ */
+    padding: 0 10px; 
 }
-
 
 /* #HEADER */
 
 header {
   font-size: 20px;
   background: #f0e8df;
-  padding: 2% 5%;
+  padding: 1% 5%;
   position: sticky;
   top: 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
@@ -54,25 +53,26 @@ header.hide {
 
 .logo {
     display: flex;
-    align-items: center; /* центровка по вертикали */
+    align-items: center;
     gap: 10px;
 }
 
 .logo img {
-    width: 60px;         /* можно уменьшить до ровной высоты */
-    height: 60px;        /* фиксируем высоту */
-    object-fit: cover;   /* чтобы картинка не деформировалась */
-    border-radius: 8px;
+    width: 100px;       
+    height: 100px;        
+    object-fit: cover;   
+    border-radius: 50%;
 }
 
 .logo-text {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     color: #2c2c2c;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     letter-spacing: 1px;
-    line-height: 1; /* чтобы текст не «раздувал» контейнер */
+    line-height: 1; 
 }
+
 /* Навигация */
 .top-nav ul {
   display: flex;
@@ -101,7 +101,6 @@ header.hide {
   font-size: 16px;
 }
 
-/* hover одинаковый для всех */
 .top-nav a:hover,
 .whatsapp-btn:hover,
 .map-btn:hover {
@@ -110,7 +109,6 @@ header.hide {
   transform: scale(1.05);
 }
 
-/* Контейнер по центру */
 .main-container {
   width: 80%;
   margin: 0 auto;
@@ -119,8 +117,6 @@ header.hide {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding-bottom: 3%;
 }
-
-
 
 /* HERO */
 
@@ -139,15 +135,18 @@ section {
 }
 
 #hero h1 {
-    font-size: 40px;
+    font-size: 50px;
+}
+
+#hero h1 .bottom {
+  display: block;
+  font-size: 30px; 
 }
 
 .hero-img {
     width: 100%;
     border-radius: 12px;
 }
-
-
 
 /* WHY US */
 
@@ -186,10 +185,6 @@ section {
     position: absolute;
     left: 0;
 }
-
-
-
-
 
 /* PROGRAM */
 
@@ -245,7 +240,7 @@ section {
 
 .course-cards {
     display: flex;
-    align-items: flex-start; /* ключ! чтобы высота не выравнивалась */
+    align-items: flex-start; 
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -261,11 +256,9 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
 
     display: flex;
-    flex-direction: column;     /* ставим элементы вертикально */
-    justify-content: space-between; /* распределяем сверху и снизу */
+    flex-direction: column;   
+    justify-content: space-between; 
 }
-
-
 
 .course-card:hover {
     transform: translateY(-5px);
@@ -287,7 +280,7 @@ section {
 }
 
 .course-details {
-  display: none; /* скрыто по умолчанию */
+  display: none; 
   margin-top: 10px;
   animation: fadeIn 0.3s ease;
 }
@@ -313,8 +306,6 @@ section {
 }
 
 
-
-/* FOOTER */
 #contacts{
     text-align: center;
 }
@@ -336,7 +327,6 @@ footer {
 }
 
 
-/* SHOWCASE */
 .carousel{
     position:relative;
     max-width:1100px;
@@ -411,8 +401,6 @@ footer {
     transform:scale(1.05)
 }
 
-/* .showcase-text h3{color:var(--accent); margin-bottom:10px} */
-
 .showcase-text p{
     font-size:20px; 
     line-height:1.5; 
@@ -452,7 +440,6 @@ footer {
 }
 
 
-
 .header-inner {
   gap: 12px;
   align-items: center;
@@ -479,7 +466,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Анимация в крестик */
+
 .nav-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(10px, 10px);
 }
@@ -501,9 +488,31 @@ footer {
     .showcase-thumbs{
         grid-template-columns:repeat(2,100px); 
     }
+    .logo img{
+        width: 80px;
+        height: 80px;
+    }
+    .logo-text{
+        font-size: 25px;
+    }
+
+    #hero h1{
+        font-size: 2.5rem;
+    }
+
+    #hero h1 .bottom{
+        font-size: 2.1rem;
+    }
+
+    header{
+        padding: 1% 2%;
+    }
+
+    .top-nav ul{
+        gap: 8px;
+    }
 }
 
-/* Мелкие экраны: padding всего сайта меньше */
 @media (max-width: 420px) {
   body { font-size: 15px; }
   header { padding: 12px 14px; }
@@ -534,18 +543,18 @@ footer {
 
     .top-nav ul {
     display: flex;
-    flex-direction: column; /* для мобильного меню */
+    flex-direction: column; 
     gap: 10px;
     padding: 10px 20px;
-    align-items: center; /* чтобы кнопки были по центру */
+    align-items: center; 
     }
 
     .top-nav a {
-    display: inline-flex;             /* используем inline-flex для центрирования */
-    justify-content: center;          /* центрируем текст по горизонтали */
-    align-items: center;              /* центрируем текст по вертикали */
-    width: 200px;                     /* фиксированная ширина всех кнопок */
-    padding: 10px 0;                  /* только вертикальный padding */
+    display: inline-flex;             
+    justify-content: center;      
+    align-items: center;         
+    width: 200px;             
+    padding: 10px 0;             
     background-color: #d9c3b0;
     color: #2c2c2c;
     text-decoration: none;
@@ -553,14 +562,20 @@ footer {
     border-radius: 8px;
     transition: all 0.3s ease;
     }
+
     .logo img {
-        width: 50px;
-    }
-    html {
-        font-size: 88%; /* чуть меньше, чем на больших планшетах */
+        width: 60px;
+        height: 60px;
     }
 
-    /* Hero */
+    .logo-text{
+        font-size: 22px;
+    }
+
+    html {
+        font-size: 88%; 
+    }
+
     #hero .hero-content {
         display: flex;
         flex-direction: column;
@@ -577,7 +592,6 @@ footer {
         margin: 14px 0;
     }
 
-    /* Контакты */
     #contacts {
         font-size: 1.2rem;
         line-height: 1.5;
@@ -587,25 +601,22 @@ footer {
         margin: 5px 0;
     }
 
-    /* Заголовки */
     h1 { font-size: 2rem; }
     h2 { font-size: 1.6rem; }
     h3 { font-size: 1.4rem; }
 
-    /* Секции и отступы */
     section {
         padding: 3% 4%;
     }
 
-    /* Карточки курсов */
     .course-card {
         width: 260px;
         padding: 16px;
     }
 
     .showcase-wrapper {
-        flex-direction: column; /* главный блок вертикально */
-        align-items: center; /* по центру */
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
@@ -628,10 +639,10 @@ footer {
     }
 
     .showcase-thumbs {
-        display: flex; /* горизонтально */
+        display: flex; 
         justify-content: center;
         gap: 10px;
-        flex-wrap: wrap; /* чтобы при переполнении переходили на новую строку */
+        flex-wrap: wrap; 
         margin-bottom: 10px;
     }
 
@@ -647,11 +658,15 @@ footer {
         max-width: 90%;
         margin: 0 auto;
     }
+
+    header{
+        padding: 1% 5%;
+    }
 }
 
 @media (max-width: 909px) {
     .showcase-wrapper {
-        flex-direction: column; /* главный блок сверху */
+        flex-direction: column; 
         align-items: center;
     }
 
@@ -679,15 +694,14 @@ footer {
     }
 }
 
-/* Tablets Portrait / Small Tablets (600px – 767px) */
 @media (max-width: 767px) {
     .main-container {
     width: 100%;
     }
         body {
-        background: none !important; /* убираем фоновое изображение */
+        background: none !important; 
         width: 100%;
-        min-height: 100vh; /* тело растягивается на весь экран */
+        min-height: 100vh; 
         margin: 0;
         padding: 0;
     }
@@ -718,8 +732,8 @@ footer {
 
     .carousel-arrow {
         position: absolute;
-        top: 40%; /* центр по вертикали блока */
-        transform: translateY(-50%); /* корректировка */
+        top: 40%; 
+        transform: translateY(-50%); 
         width: 36px;
         height: 36px;
         font-size: 22px;
@@ -727,17 +741,16 @@ footer {
     }
 
     .carousel-arrow.left {
-        left: 30px; /* отступ слева */
+        left: 30px; 
     }
 
     .carousel-arrow.right {
-        right: 30px; /* отступ справа */
+        right: 30px; 
     }
 
 
 }
 
-/* Мобильные телефоны (под 599px) */
 @media (max-width: 599px) {
     .showcase-wrapper {
         flex-direction: column;
@@ -764,4 +777,17 @@ footer {
         font-size: 14px;
         text-align: center;
     }
+}
+
+@media (max-width: 422px) {
+  .main-container {
+    width: 100%;
+    margin: 0;           
+    padding: 0;        
+    border-radius: 0;  
+  }
+
+  section, .container, .wrapper {
+    padding: 0;       
+  }
 }
